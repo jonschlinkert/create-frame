@@ -1,0 +1,46 @@
+{
+  "name": "create-frame",
+  "description": "Easily add private variables to handlebars block helpers.",
+  "version": "0.1.1",
+  "homepage": "https://github.com/jonschlinkert/create-frame",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/create-frame",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/create-frame/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "utils.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "define-property": "^0.2.5",
+    "extend-shallow": "^2.0.1",
+    "lazy-cache": "^0.2.3"
+  },
+  "devDependencies": {
+    "handlebars": "^4.0.3",
+    "mocha": "*",
+    "should": "*"
+  },
+  "keywords": [
+    "helpers",
+    "handlebars",
+    "handlebars-helpers"
+  ],
+  "verb": {
+    "related": {
+      "list": [
+        "handlebars-helpers",
+        "assemble"
+      ]
+    }
+  }
+}
