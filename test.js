@@ -17,11 +17,21 @@ describe('createFrame', function () {
     assert.equal(typeof obj.extend, 'function');
   });
 
-  it('should exend the given object with the `extend` method:', function () {
+  it('should extend the frame object with the `extend` method:', function () {
     var obj = createFrame({});
     obj.extend({a: 'aaa'});
     obj.extend({b: 'bbb'});
     obj.should.have.properties('a', 'b');
+  });
+
+  it('should extend the frame object with additional objects:', function () {
+    var obj = createFrame({}, {a: 'aaa'}, {b: 'bbb'});
+    obj.should.have.properties('a', 'b');
+  });
+
+  it('should work with sparse arguments:', function () {
+    var obj = createFrame({}, undefined, {b: 'bbb'});
+    obj.should.have.properties('b');
   });
 
   it('should add private variables when passed to `options.fn()`:', function () {
