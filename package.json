@@ -11,6 +11,8 @@
   "license": "MIT",
   "files": [
     "index.js",
+    "LICENSE",
+    "README.md",
     "utils.js"
   ],
   "main": "index.js",
@@ -23,24 +25,42 @@
   "dependencies": {
     "define-property": "^0.2.5",
     "extend-shallow": "^2.0.1",
-    "lazy-cache": "^0.2.3"
+    "lazy-cache": "^2.0.1"
   },
   "devDependencies": {
+    "gulp-format-md": "^0.1.9",
     "handlebars": "^4.0.3",
-    "mocha": "*",
-    "should": "*"
+    "mocha": "^2.5.3",
+    "should": "^10.0.0"
   },
   "keywords": [
-    "helpers",
+    "create",
+    "frame",
     "handlebars",
-    "handlebars-helpers"
+    "handlebars-helpers",
+    "helpers"
   ],
   "verb": {
     "related": {
       "list": [
-        "handlebars-helpers",
-        "assemble"
+        "assemble",
+        "handlebars-helpers"
       ]
-    }
+    },
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": [
+      "verb",
+      "verb-generate-readme"
+    ]
   }
 }
