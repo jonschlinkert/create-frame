@@ -1,8 +1,19 @@
 'use strict';
 
-var lazy = require('lazy-cache')(require);
+var utils = require('lazy-cache')(require);
+var fn = require;
+require = utils;
 
-lazy('extend-shallow', 'extend');
-lazy('define-property', 'define');
+/**
+ * Lazily required module dependencies
+ */
 
-module.exports = lazy;
+require('define-property', 'define');
+require('extend-shallow', 'extend');
+require = fn;
+
+/**
+ * Expose `utils` modules
+ */
+
+module.exports = utils;
