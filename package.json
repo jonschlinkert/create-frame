@@ -1,7 +1,7 @@
 {
   "name": "create-frame",
   "description": "Easily add private variables to handlebars block helpers.",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "homepage": "https://github.com/jonschlinkert/create-frame",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/create-frame",
