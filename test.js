@@ -1,15 +1,14 @@
 'use strict';
 
 require('mocha');
-require('should');
-var hbs = require('handlebars');
 var assert = require('assert');
+var hbs = require('handlebars');
 var createFrame = require('./');
 
 describe('createFrame', function () {
   it('should create a reference to _parent:', function () {
     var obj = createFrame({});
-    obj.should.have.property('_parent');
+    assert(obj.hasOwnProperty('_parent'));
   });
 
   it('should expose a non-enumerable `extend` method:', function () {
@@ -21,17 +20,19 @@ describe('createFrame', function () {
     var obj = createFrame({});
     obj.extend({a: 'aaa'});
     obj.extend({b: 'bbb'});
-    obj.should.have.properties('a', 'b');
+    assert(obj.hasOwnProperty('a'));
+    assert(obj.hasOwnProperty('b'));
   });
 
   it('should extend the frame object with additional objects:', function () {
     var obj = createFrame({}, {a: 'aaa'}, {b: 'bbb'});
-    obj.should.have.properties('a', 'b');
+    assert(obj.hasOwnProperty('a'));
+    assert(obj.hasOwnProperty('b'));
   });
 
   it('should work with sparse arguments:', function () {
     var obj = createFrame({}, undefined, {b: 'bbb'});
-    obj.should.have.properties('b');
+    assert(obj.hasOwnProperty('b'));
   });
 
   it('should add private variables when passed to `options.fn()`:', function () {
@@ -66,8 +67,8 @@ describe('createFrame', function () {
   });
 
   it('should throw an error if args are invalid:', function () {
-    (function () {
+    assert.throws(function () {
       createFrame();
-    }).should.throw('createFrame expects data to be an object');
+    }, /createFrame expects data to be an object/);
   });
 });
