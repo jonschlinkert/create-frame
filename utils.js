@@ -10,6 +10,7 @@ require = utils;
 
 require('define-property', 'define');
 require('extend-shallow', 'extend');
+require('isobject', 'isObject');
 require = fn;
 
 /**

@@ -10,7 +10,7 @@
 var utils = require('./utils');
 
 module.exports = function createFrame(data) {
-  if (data == null || typeof data !== 'object') {
+  if (!utils.isObject(data)) {
     throw new TypeError('createFrame expects data to be an object');
   }
 
@@ -18,7 +18,7 @@ module.exports = function createFrame(data) {
   var frame = extend({}, data);
   frame._parent = data;
 
-  utils.define(frame, 'extend', function (data) {
+  utils.define(frame, 'extend', function(data) {
     extend(this, data);
   });
 
