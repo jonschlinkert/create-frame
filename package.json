@@ -11,8 +11,6 @@
   "license": "MIT",
   "files": [
     "index.js",
-    "LICENSE",
-    "README.md",
     "utils.js"
   ],
   "main": "index.js",
@@ -25,13 +23,14 @@
   "dependencies": {
     "define-property": "^0.2.5",
     "extend-shallow": "^2.0.1",
-    "lazy-cache": "^2.0.1"
+    "isobject": "^3.0.0",
+    "lazy-cache": "^2.0.2"
   },
   "devDependencies": {
-    "gulp-format-md": "^0.1.9",
-    "handlebars": "^4.0.3",
-    "mocha": "^2.5.3",
-    "should": "^10.0.0"
+    "gulp-format-md": "^0.1.11",
+    "handlebars": "^4.0.6",
+    "mocha": "^3.2.0",
+    "should": "^11.1.2"
   },
   "keywords": [
     "create",
